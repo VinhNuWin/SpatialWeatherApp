@@ -55,6 +55,7 @@ export const GetWeather = (props) => {
     }
     fetchData();
   }, []);
+
   return (
     <div className="container">
       <div className="weather">Current Temp {posts.temperature}°</div>
@@ -65,21 +66,3 @@ export const GetWeather = (props) => {
     </div>
   );
 };
-
-//   return axios await
-//     .get(
-//       "https://api.open-meteo.com/v1/forecast?latitude=33.7804&longitude=-118.1587&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_probability_max,windspeed_10m_max&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&timezone=auto&forecast_days=1",
-//       {
-//         params: {
-//           latitude: lat,
-//           longitude: lon,
-//           timezone,
-//         },
-//       }
-//     )
-//     .then(({ data }) => {
-//       console.log(data);
-//       const temperature = data.current_weather.temperature;
-//       return <h1>Hello</h1>;
-//     });
-// };
