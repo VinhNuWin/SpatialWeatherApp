@@ -1,5 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import snow from "./assets/snowy.png";
+import { GetDate } from "./GetDate";
 
 export const GetWeather = (props) => {
   const [long, setLong] = useState(0);
@@ -58,11 +60,19 @@ export const GetWeather = (props) => {
 
   return (
     <div className="container">
-      <div className="weather">Current Temp {posts.temperature}°</div>
-      <div className="maxTemp">High {posts.maxTemp}°</div>
-      <div className="minTemp">Low {posts.minTemp}°</div>
-      <div className="wind">Windspeed {posts.windspeed} mph</div>
-      <div className="precip">Precipitation {posts.precip} %</div>
+      <div className="item1 ">
+        <h1 className="weather "> {posts.temperature}°</h1>
+        <div className="maxTemp ">
+          H: {posts.maxTemp}° L: {posts.minTemp}°
+        </div>
+        <div className="minTemp"></div>
+        <div className="wind">Windspeed {posts.windspeed} mph</div>
+        <div className="precip">Precipitation {posts.precip} %</div>
+      </div>
+      <div className="item2">
+        <GetDate />
+      </div>
+      <img src={snow} />
     </div>
   );
 };

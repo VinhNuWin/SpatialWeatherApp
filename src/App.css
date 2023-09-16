@@ -8,12 +8,54 @@
 .container {
   width: 80%;
   height: 80%;
-  border-radius: 5rem;
-  border: 1px solid white;
+  /* position: relative; */
+  border-radius: 1rem;
+  border: 1px solid black;
   color: white;
+  /* background-image: url("./assets/snow-house.png"); */
+  overflow: hidden;
 }
 
 .wrapper {
   width: 100vw;
   height: 100vh;
+}
+
+.border {
+  border: 2px solid red;
+}
+
+.weather {
+}
+.maxTemp {
+}
+.minTemp {
+}
+.wind {
+}
+.precip {
+}
+
+.item1 {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: absolute;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: black;
+  left: 10%;
+  top: 10%;
+}
+
+.item2 {
+  position: relative;
+}
+
+.date {
+  position: absolute;
+  right: 10%;
 }
